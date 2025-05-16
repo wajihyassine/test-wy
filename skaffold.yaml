@@ -1,0 +1,29 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+build:
+  tagPolicy:
+      sha256: {}
+  local:
+    useDockerCLI: true
+    useBuildkit: true
+    concurrency: 0
+    push: true
+  artifacts:
+  - image: us-docker.pkg.dev/osdfir-registry/timesketch-test/timesketch
+profiles:
+- name: prod
+  deploy:
+    statusCheckDeadlineSeconds: 90
+    helm:
+      releases:
+      - name: prod
+        chartPath: ./osdfir-infrastructure
+        skipBuildDependencies: true
+        recreatePods: false
+        setValues:
+          global.grr.enabled: false
+          global.yeti.enabled: false
+          global.openrelik.enabled: false
+        setValueTemplates:
+          timesketch.image.repository: "{{.IMAGE_REPO_us_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
+          timesketch.image.tag: "{{.IMAGE_TAG_us_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
