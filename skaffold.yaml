@@ -1,13 +1,6 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 build:
-  tagPolicy:
-      sha256: {}
-  local:
-    useDockerCLI: true
-    useBuildkit: true
-    concurrency: 0
-    push: false
   artifacts:
   - image: us-docker.pkg.dev/osdfir-registry/timesketch-v2/timesketch
 profiles:
