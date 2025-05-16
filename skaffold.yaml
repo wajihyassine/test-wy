@@ -7,7 +7,7 @@ build:
     useDockerCLI: true
     useBuildkit: true
     concurrency: 0
-    push: true
+    push: false
   artifacts:
   - image: us-docker.pkg.dev/osdfir-registry/timesketch-v2/timesketch
 profiles:
