@@ -9,7 +9,7 @@ build:
     concurrency: 0
     push: true
   artifacts:
-  - image: us-docker.pkg.dev/osdfir-registry/timesketch-test/timesketch
+  - image: us-docker.pkg.dev/osdfir-registry/timesketch-v2/timesketch
 profiles:
 - name: prod
   deploy:
