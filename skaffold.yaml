@@ -1,8 +1,5 @@
 apiVersion: skaffold/v2beta16
 kind: Config
-build:
-  artifacts:
-  - image: us-docker.pkg.dev/osdfir-registry/timesketch-v2/timesketch
 profiles:
 - name: prod
   deploy:
