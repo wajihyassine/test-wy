@@ -15,5 +15,5 @@ profiles:
           global.yeti.enabled: false
           global.openrelik.enabled: false
         setValueTemplates:
-          timesketch.image.repository: "{{.IMAGE_FULLY_QUALIFIED_us_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
-          timesketch.image.tag: "{{.IMAGE_TAG_us_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
+          timesketch.image.repository: "{{.IMAGE_FULLY_QUALIFIED_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
+          timesketch.image.tag: "{{.IMAGE_TAG_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
