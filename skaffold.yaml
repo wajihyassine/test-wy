@@ -17,5 +17,5 @@ profiles:
         setValueTemplates:
           timesketch.image.repository: "{{.IMAGE_FULLY_QUALIFIED_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
           timesketch.image.tag: "{{.IMAGE_TAG_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_timesketch}}"
-          opensearch.image.repository: "{{.IMAGE_FULLY_QUALIFIED_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_dev}}"
-          opensearch.image.tag: "{{.IMAGE_TAG_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_dev}}"
+          timesketch.opensearch.image.repository: "{{.IMAGE_FULLY_QUALIFIED_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_dev}}"
+          timesketch.opensearch.image.tag: "{{.IMAGE_TAG_us_central1_docker_pkg_dev_osdfir_registry_timesketch_v2_dev}}"
