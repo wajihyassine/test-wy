@@ -7,7 +7,7 @@ profiles:
     helm:
       releases:
       - name: prod
-        chartPath: ./charts/osdfir-infrastructure
+        chartPath: ./osdfir-infrastructure/charts/osdfir-infrastructure
         skipBuildDependencies: true
         recreatePods: false
         setValues:
